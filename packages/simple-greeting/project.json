@@ -1,0 +1,31 @@
+{
+  "name": "simple-greeting",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/simple-greeting/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/simple-greeting",
+        "main": "packages/simple-greeting/src/index.ts",
+        "tsConfig": "packages/simple-greeting/tsconfig.lib.json",
+        "assets": ["packages/simple-greeting/*.md"],
+        "generatePackageJson": true
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs simple-greeting {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/simple-greeting/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
