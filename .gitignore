@@ -1,0 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+node_modules
+/npm-debug.log*
+/yarn-error.log
+/pnpm-debug.log*
+/pnpm-lock.yaml
+/yarn.lock
+/package-lock.json
+/config/demoConfig.ts
+/.history
+
+# yalc
+**/.yalc
+*/.yalc.lock
+**/yalc.lock
+yalc.lock
+
+# production
+/dist
+dist
+es
+lib
+!/plugins/*/lib
+
+# misc
+.DS_Store
+
+# ide
+/.vscode
+/.idea
+.history
+/config/target.json
+lerna-debug.log
