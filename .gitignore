@@ -11,6 +11,7 @@ node_modules
 /package-lock.json
 /config/demoConfig.ts
 /.history
+/temp
 
 # yalc
 **/.yalc

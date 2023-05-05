@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@webcomponents-sdk/is-odd": ["packages/is-odd/src/index.ts"],
       "@webcomponents-sdk/simple-greeting": [
         "packages/simple-greeting/src/index.ts"
       ]
